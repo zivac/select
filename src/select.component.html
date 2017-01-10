@@ -1,0 +1,9 @@
+<div class="select" (click)="toggle()">
+  <span *ngIf="isMultiple">
+    <span class="tag" *ngFor="let option of selectedOptions">{{option}}</span>
+  </span>
+  <span *ngIf="!isMultiple">{{selectedOption}}</span>
+</div>
+<div class="options" *ngIf="isOpen">
+  <div class="option" *ngFor="let option of options" (click)="selectOption(option)">{{option}}</div>
+</div>
